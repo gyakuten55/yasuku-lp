@@ -1,7 +1,5 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const TO_EMAIL = process.env.TO_EMAIL || 'ohshita@riilgate.com';
 const FROM_EMAIL = process.env.FROM_EMAIL || 'onboarding@resend.dev';
 
@@ -12,7 +10,17 @@ export default async function handler(req, res) {
   }
 
   try {
-    const data = req.body || {};
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not set');
+      return res.status(500).json({ error: 'RESEND_API_KEY 未設定（Vercel の環境変数を確認してください）' });
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    let data = req.body || {};
+    if (typeof data === 'string') {
+      try { data = JSON.parse(data); } catch { data = {}; }
+    }
     const v = sanitize(data);
 
     if (!v.email || !v.companyName || !v.fullName || !v.systemName || !v.usage) {
@@ -23,7 +31,7 @@ export default async function handler(req, res) {
     const html = renderEmailHtml(v, r);
     const text = renderEmailText(v, r);
 
-    const { error } = await resend.emails.send({
+    const { data: sendData, error } = await resend.emails.send({
       from: `ヤスク 削減診断フォーム <${FROM_EMAIL}>`,
       to: TO_EMAIL,
       reply_to: v.email,
@@ -33,14 +41,19 @@ export default async function handler(req, res) {
     });
 
     if (error) {
-      console.error('Resend error:', error);
-      return res.status(502).json({ error: 'メール送信に失敗しました' });
+      console.error('Resend error:', JSON.stringify(error));
+      return res.status(502).json({
+        error: 'メール送信に失敗しました',
+        detail: error?.message || error?.name || String(error),
+        from: FROM_EMAIL,
+        to: TO_EMAIL,
+      });
     }
 
-    return res.status(200).json({ ok: true });
+    return res.status(200).json({ ok: true, id: sendData?.id });
   } catch (err) {
     console.error('Handler error:', err);
-    return res.status(500).json({ error: 'サーバーエラー' });
+    return res.status(500).json({ error: 'サーバーエラー', detail: err?.message || String(err) });
   }
 }
 
