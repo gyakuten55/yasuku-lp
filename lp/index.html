@@ -994,14 +994,14 @@
           '【診断】削減率(%)': fmt(r.ratePct),
         };
 
+        const body = new URLSearchParams();
+        for (const [k, v] of Object.entries(payload)) body.append(k, String(v));
+
         try {
           const res = await fetch('https://formsubmit.co/ajax/ohshita@riilgate.com', {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json',
-            },
-            body: JSON.stringify(payload),
+            headers: { 'Accept': 'application/json' },
+            body,
           });
           if (!res.ok) {
             console.warn('診断データの送信に失敗しました', res.status);
