@@ -967,24 +967,40 @@
       const submitBtn = form.querySelector('.form-submit');
 
       async function sendToBackend(values, r) {
+        const data = new FormData(form);
+        const fmt = (n) => (Number.isFinite(n) ? Number(n).toLocaleString('ja-JP') : '-');
+        const features = String(data.get('features') || '');
+        const industry = String(data.get('industry') || '');
+        const position = String(data.get('position') || '');
+
         const payload = {
-          systemName: values.systemName,
-          usage: values.usage,
-          monthlyFee: values.monthlyFeeNum,
-          features: String(new FormData(form).get('features') || ''),
-          employees: values.employeesNum,
-          industry: String(new FormData(form).get('industry') || ''),
-          companyName: values.companyName,
-          fullName: values.fullName,
-          position: String(new FormData(form).get('position') || ''),
-          email: values.email,
-          result: r,
+          _subject: `【ヤスク】削減診断：${values.companyName} ${values.fullName} 様（${values.systemName}）`,
+          _template: 'table',
+          _captcha: 'false',
+          _replyto: values.email,
+          '会社名': values.companyName,
+          '氏名': values.fullName,
+          '役職': position || '-',
+          'メール': values.email,
+          'システム名': values.systemName,
+          '主な用途': values.usage,
+          '月額費用(円)': fmt(values.monthlyFeeNum),
+          '主な機能': features || '-',
+          '従業員数(名)': fmt(values.employeesNum),
+          '業種': industry || '-',
+          '【診断】現在の月額(円)': fmt(r.current),
+          '【診断】提案月額(円)': fmt(r.proposed),
+          '【診断】削減額(円)': fmt(r.diff),
+          '【診断】削減率(%)': fmt(r.ratePct),
         };
 
         try {
-          const res = await fetch('/api/diagnose', {
+          const res = await fetch('https://formsubmit.co/ajax/ohshita@riilgate.com', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+            },
             body: JSON.stringify(payload),
           });
           if (!res.ok) {
