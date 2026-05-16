@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ヤスク｜業務システムに、ジェネリックという選択肢を。</title>
+  <meta name="description" content="中小企業向け 月額システム費削減サービス「ヤスク」。今お使いの業務システムを、必要な機能だけを持つ新サービスに置き換え、月額コストを削減します。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="header-logo" aria-label="ヤスク トップへ">
+        <img src="images/logo.png" alt="ヤスク 業務システムに、ジェネリックという選択肢を。" />
+      </a>
+
+      <nav class="header-nav" id="globalNav" aria-label="グローバルナビゲーション">
+        <ul class="nav-list">
+          <li style="--i:0"><a href="#features">サービスの特徴</a></li>
+          <li style="--i:1"><a href="#flow">サービスの流れ</a></li>
+          <li style="--i:2"><a href="#price">料金体系</a></li>
+          <li style="--i:3"><a href="#faq">よくあるご質問</a></li>
+        </ul>
+        <a href="#diagnosis" class="header-cta header-cta--mobile" style="--i:4">削減診断をしてみる（無料）</a>
+      </nav>
+
+      <a href="#diagnosis" class="header-cta header-cta--desktop">削減診断をしてみる（無料）</a>
+
+      <button class="hamburger" type="button" aria-label="メニューを開く" aria-controls="globalNav" aria-expanded="false">
+        <span class="hamburger-box">
+          <span class="hamburger-line hamburger-line--top"></span>
+          <span class="hamburger-line hamburger-line--mid"></span>
+          <span class="hamburger-line hamburger-line--bot"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-overlay" hidden></div>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-bg" aria-hidden="true">
+        <!-- 背景画像はあとで差し替え -->
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="hero-label">中小企業向け 月額システム費削減サービス</span>
+
+          <h1 class="hero-title" id="heroTitle">
+            業務システムに、<br />
+            <span class="hero-title__accent">ジェネリックという</span><br />
+            選択肢を。
+          </h1>
+
+          <p class="hero-lead">
+            今お使いの業務システムに代わる新サービスをご提供し、<br />
+            月額コストを下げるサービスです。
+          </p>
+
+          <ul class="hero-cards">
+            <li class="hero-card">
+              <span class="hero-card__icon" aria-hidden="true">
+                <!-- Lucide: japanese-yen + 円囲み -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 13.5V19m0-5.5L8 7.5m4 6l4-6" />
+                  <path d="M9 14h6" />
+                  <path d="M9 17h6" />
+                </svg>
+              </span>
+              <span class="hero-card__body">
+                <span class="hero-card__label">初期費用</span>
+                <span class="hero-card__value">0<span class="hero-card__unit">円</span></span>
+              </span>
+            </li>
+
+            <li class="hero-card">
+              <span class="hero-card__icon" aria-hidden="true">
+                <!-- Lucide: trending-down -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 17h6v-6" />
+                  <path d="m22 17-8.5-8.5-5 5L2 7" />
+                </svg>
+              </span>
+              <span class="hero-card__body">
+                <span class="hero-card__label">現在のシステム費</span>
+                <span class="hero-card__value hero-card__value--text">より安く</span>
+              </span>
+            </li>
+
+            <li class="hero-card">
+              <span class="hero-card__icon" aria-hidden="true">
+                <!-- Lucide: calendar-days -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 2v4" />
+                  <path d="M16 2v4" />
+                  <rect width="18" height="18" x="3" y="4" rx="2" />
+                  <path d="M3 10h18" />
+                  <path d="M8 14h.01" />
+                  <path d="M12 14h.01" />
+                  <path d="M16 14h.01" />
+                  <path d="M8 18h.01" />
+                  <path d="M12 18h.01" />
+                  <path d="M16 18h.01" />
+                </svg>
+              </span>
+              <span class="hero-card__body">
+                <span class="hero-card__label">最低契約期間</span>
+                <span class="hero-card__value">1<span class="hero-card__unit">年間</span></span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-badge" aria-hidden="true">
+          <!-- 削減実績バッジ -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 診断フォーム ===== -->
+    <section class="form-section" id="diagnosis" aria-labelledby="formTitle">
+      <div class="form-card">
+        <div class="form-card__main">
+          <div class="form-intro">
+            <p class="form-intro__small">まずは削減可能額をチェック！</p>
+            <h2 class="form-intro__title" id="formTitle">
+              削減診断フォーム<span class="form-intro__sub">（無料）</span>
+            </h2>
+            <p class="form-intro__lead">
+              現在ご利用中のシステム情報をご入力いただくと、<br />
+              弊社で提供した場合の月額費用の目安を<br />
+              即時にご提示します。
+            </p>
+
+            <ol class="form-steps">
+              <li class="form-step">
+                <span class="form-step__icon">
+                  <!-- Material Symbols (filled): desktop_windows -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                    <path d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320Z"/>
+                  </svg>
+                </span>
+                <span class="form-step__label">情報を入力</span>
+              </li>
+              <li class="form-step__arrow" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </li>
+              <li class="form-step">
+                <span class="form-step__icon">
+                  <!-- Material Symbols (filled): calculate -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                    <path d="M320-240h60v-80h80v-60h-80v-80h-60v80h-80v60h80v80Zm200-30h200v-60H520v60Zm0-100h200v-60H520v60ZM250-592h200v-60H250v60Zm-50 472q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm364-402 56-56 56 56 42-42-56-58 56-56-42-42-56 56-56-56-42 42 56 56-56 58 42 42Z"/>
+                  </svg>
+                </span>
+                <span class="form-step__label">即時シミュレーション</span>
+              </li>
+              <li class="form-step__arrow" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </li>
+              <li class="form-step">
+                <span class="form-step__icon">
+                  <!-- Material Symbols (filled): edit_document -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                    <path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v120q-23 5-43 16t-37 28L480-237v157H240Zm320 0v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-300L683-80H560Zm263-224 37-39-37-37-38 38 38 38ZM520-600h200L520-800l200 200-200-200v200Z"/>
+                  </svg>
+                </span>
+                <span class="form-step__label">削減プランを表示</span>
+              </li>
+            </ol>
+          </div>
+
+          <form class="form-fields" id="diagnosisForm" novalidate>
+            <div class="form-grid">
+              <div class="form-field" data-field="systemName">
+                <label class="form-field__label" for="field-systemName">
+                  現在ご利用中のシステム名
+                  <span class="form-field__req form-field__req--must">（必須）</span>
+                </label>
+                <input class="form-field__input" type="text" id="field-systemName" name="systemName" placeholder="例）○○システム、△△クラウド" />
+                <p class="form-field__error" data-error-for="systemName" role="alert"></p>
+              </div>
+
+              <div class="form-field" data-field="usage">
+                <label class="form-field__label" for="field-usage">
+                  主な用途
+                  <span class="form-field__req form-field__req--must">（必須）</span>
+                </label>
+                <div class="form-field__select">
+                  <select id="field-usage" name="usage">
+                    <option value="">選択してください</option>
+                    <option>顧客管理（CRM）</option>
+                    <option>営業支援（SFA）</option>
+                    <option>案件管理</option>
+                    <option>見積・請求管理</option>
+                    <option>在庫・生産管理</option>
+                    <option>その他</option>
+                  </select>
+                </div>
+                <p class="form-field__error" data-error-for="usage" role="alert"></p>
+              </div>
+
+              <div class="form-field" data-field="monthlyFee">
+                <label class="form-field__label" for="field-monthlyFee">
+                  月額費用（税込）
+                  <span class="form-field__req form-field__req--must">（必須）</span>
+                </label>
+                <div class="form-field__input-suffix">
+                  <input class="form-field__input" type="text" id="field-monthlyFee" name="monthlyFee" placeholder="例）50,000" inputmode="numeric" />
+                  <span class="form-field__suffix">円/月</span>
+                </div>
+                <p class="form-field__error" data-error-for="monthlyFee" role="alert"></p>
+              </div>
+
+              <div class="form-field" data-field="features">
+                <label class="form-field__label" for="field-features">
+                  利用中の主な機能（複数選択可）
+                </label>
+                <div class="form-field__select">
+                  <select id="field-features" name="features">
+                    <option value="">選択してください</option>
+                    <option>顧客情報の管理</option>
+                    <option>案件・商談の管理</option>
+                    <option>見積書の作成</option>
+                    <option>請求書の発行</option>
+                    <option>在庫の管理</option>
+                    <option>レポート・分析</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field" data-field="employees">
+                <label class="form-field__label" for="field-employees">
+                  従業員数
+                  <span class="form-field__req form-field__req--must">（必須）</span>
+                </label>
+                <div class="form-field__input-suffix">
+                  <input class="form-field__input" type="text" id="field-employees" name="employees" placeholder="例）10" inputmode="numeric" />
+                  <span class="form-field__suffix">名</span>
+                </div>
+                <p class="form-field__error" data-error-for="employees" role="alert"></p>
+              </div>
+
+              <div class="form-field" data-field="industry">
+                <label class="form-field__label" for="field-industry">
+                  業種
+                  <span class="form-field__req form-field__req--any">（任意）</span>
+                </label>
+                <div class="form-field__select">
+                  <select id="field-industry" name="industry">
+                    <option value="">選択してください</option>
+                    <option>製造業</option>
+                    <option>建設業</option>
+                    <option>小売業</option>
+                    <option>サービス業</option>
+                    <option>IT業</option>
+                    <option>その他</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field" data-field="companyName">
+                <label class="form-field__label" for="field-companyName">
+                  会社名
+                  <span class="form-field__req form-field__req--must">（必須）</span>
+                </label>
+                <input class="form-field__input" type="text" id="field-companyName" name="companyName" placeholder="例）株式会社ヤスク" autocomplete="organization" />
+                <p class="form-field__error" data-error-for="companyName" role="alert"></p>
+              </div>
+
+              <div class="form-field" data-field="fullName">
+                <label class="form-field__label" for="field-fullName">
+                  氏名
+                  <span class="form-field__req form-field__req--must">（必須）</span>
+                </label>
+                <input class="form-field__input" type="text" id="field-fullName" name="fullName" placeholder="例）山田 太郎" autocomplete="name" />
+                <p class="form-field__error" data-error-for="fullName" role="alert"></p>
+              </div>
+
+              <div class="form-field" data-field="position">
+                <label class="form-field__label" for="field-position">
+                  役職
+                  <span class="form-field__req form-field__req--any">（任意）</span>
+                </label>
+                <input class="form-field__input" type="text" id="field-position" name="position" placeholder="例）代表取締役、情報システム部長" autocomplete="organization-title" />
+              </div>
+
+              <div class="form-field" data-field="email">
+                <label class="form-field__label" for="field-email">
+                  メールアドレス
+                  <span class="form-field__req form-field__req--must">（必須）</span>
+                </label>
+                <input class="form-field__input" type="email" id="field-email" name="email" placeholder="例）yasuku@example.co.jp" autocomplete="email" />
+                <p class="form-field__error" data-error-for="email" role="alert"></p>
+              </div>
+            </div>
+
+            <button class="form-submit" type="submit">
+              <span class="form-submit__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="16" height="20" x="4" y="2" rx="2" />
+                  <line x1="8" x2="16" y1="6" y2="6" />
+                  <line x1="16" x2="16" y1="14" y2="18" />
+                  <path d="M16 10h.01" />
+                  <path d="M12 10h.01" />
+                  <path d="M8 10h.01" />
+                  <path d="M12 14h.01" />
+                  <path d="M8 14h.01" />
+                  <path d="M12 18h.01" />
+                  <path d="M8 18h.01" />
+                </svg>
+              </span>
+              <span>削減プランを今すぐ診断する（無料）</span>
+            </button>
+
+            <p class="form-note">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              ご入力いただいた情報は診断のみに使用し、営業連絡はいたしません
+            </p>
+          </form>
+        </div>
+
+        <!-- 結果表示例バナー -->
+        <div class="form-results" id="diagnosisResults">
+          <div class="form-results__label" data-result-label>
+            診断結果の表示例
+            <small data-result-sublabel>（入力後、即時表示）</small>
+          </div>
+
+          <div class="form-results__flow">
+            <div class="form-results__item">
+              <div class="form-results__name">現在の月額費用</div>
+              <div class="form-results__value">
+                <span data-result="current">50,000</span><span class="form-results__unit">円</span>
+              </div>
+            </div>
+            <span class="form-results__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l8 7-8 7V5z"/></svg></span>
+
+            <div class="form-results__item form-results__item--accent">
+              <div class="form-results__name">弊社ご提案月額費用<small>（目安）</small></div>
+              <div class="form-results__value form-results__value--accent">
+                <span data-result="proposed">32,000</span><span class="form-results__unit">円</span>
+              </div>
+            </div>
+            <span class="form-results__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l8 7-8 7V5z"/></svg></span>
+
+            <div class="form-results__item">
+              <div class="form-results__name">削減額<small>（目安）</small></div>
+              <div class="form-results__value form-results__value--cut">
+                <span data-result="diff">18,000</span><span class="form-results__unit">円</span>
+              </div>
+            </div>
+            <span class="form-results__arrow form-results__arrow--last"></span>
+
+            <div class="form-results__item">
+              <div class="form-results__name">削減率<small>（目安）</small></div>
+              <div class="form-results__value form-results__value--cut">
+                <span data-result="rate">36</span><span class="form-results__unit">%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="form-results__note">
+          ※上記はあくまで目安です。実際の内容や費用などはヒアリング後にご提示します。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== サービスの流れ ===== -->
+    <section class="flow-section" id="flow" aria-labelledby="flowTitle">
+      <h2 class="section-title" id="flowTitle">
+        <span class="section-title__bar"></span>
+        <span class="section-title__text">サービスの流れ</span>
+        <span class="section-title__bar"></span>
+      </h2>
+
+      <ol class="flow-list">
+        <li class="flow-card">
+          <span class="flow-card__step">Step 1</span>
+          <span class="flow-card__icon" aria-hidden="true">
+            <!-- Lucide: file-pen-line -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z"/>
+              <path d="M14.487 7.858A1 1 0 0 1 14 7V2"/>
+              <path d="M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516"/>
+              <path d="M8 18h1"/>
+            </svg>
+          </span>
+          <h3 class="flow-card__title">情報入力</h3>
+          <p class="flow-card__lead">フォームに現在のシステム情報を入力<br />削減プランの目安を即時表示（無料）</p>
+        </li>
+
+        <li class="flow-card">
+          <span class="flow-card__step">Step 2</span>
+          <span class="flow-card__icon" aria-hidden="true">
+            <!-- Lucide: users -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <path d="M16 3.128a4 4 0 0 1 0 7.744"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <circle cx="9" cy="7" r="4"/>
+            </svg>
+          </span>
+          <h3 class="flow-card__title">無料カウンセリング</h3>
+          <p class="flow-card__lead">ご興味のある方にZoom等で15〜20分、用途を詳しくヒアリング（無料）</p>
+        </li>
+
+        <li class="flow-card">
+          <span class="flow-card__step">Step 3</span>
+          <span class="flow-card__icon" aria-hidden="true">
+            <!-- Lucide: clipboard-list -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+              <path d="M12 11h4"/>
+              <path d="M12 16h4"/>
+              <path d="M8 11h.01"/>
+              <path d="M8 16h.01"/>
+            </svg>
+          </span>
+          <h3 class="flow-card__title">お見積もり提出</h3>
+          <p class="flow-card__lead">1週間以内に、用途に合わせた新サービスのお見積もりを提出（無料）</p>
+        </li>
+
+        <li class="flow-card">
+          <span class="flow-card__step">Step 4</span>
+          <span class="flow-card__icon" aria-hidden="true">
+            <!-- Lucide: handshake -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
+              <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
+              <path d="m21 3 1 11h-2"/>
+              <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/>
+              <path d="M3 4h8"/>
+            </svg>
+          </span>
+          <h3 class="flow-card__title">ご契約</h3>
+          <p class="flow-card__lead">初期費用0円、最低契約期間1年間でご契約</p>
+        </li>
+
+        <li class="flow-card">
+          <span class="flow-card__step">Step 5</span>
+          <span class="flow-card__icon" aria-hidden="true">
+            <!-- MDI: cogs -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.9 18.45c1.35 0 2.45-1.1 2.45-2.45s-1.1-2.45-2.45-2.45c-1.36 0-2.45 1.1-2.45 2.45s1.09 2.45 2.45 2.45m5.2-1.77l1.48 1.16c.13.11.17.29.08.45l-1.4 2.42a.35.35 0 0 1-.43.15l-1.74-.7c-.36.28-.76.51-1.18.69l-.27 1.85c-.02.17-.17.3-.34.3h-2.8c-.18 0-.32-.13-.35-.3l-.26-1.85c-.43-.18-.82-.41-1.18-.69l-1.75.7c-.15.06-.34 0-.42-.15l-1.4-2.42a.35.35 0 0 1 .08-.45l1.48-1.16l-.05-.68l.05-.69l-1.48-1.15a.35.35 0 0 1-.08-.45l1.4-2.42c.08-.16.27-.22.42-.16l1.75.71c.36-.28.75-.52 1.18-.69l.26-1.86c.03-.16.17-.29.35-.29h2.8c.17 0 .32.13.34.29l.27 1.86c.42.17.82.41 1.18.69l1.74-.71c.17-.06.34 0 .43.16l1.4 2.42c.09.15.05.34-.08.45l-1.48 1.15l.05.69zM6.69 8.07c.87 0 1.57-.7 1.57-1.57s-.7-1.58-1.57-1.58A1.58 1.58 0 0 0 5.11 6.5c0 .87.71 1.57 1.58 1.57m3.34-1.13l.97.74c.07.07.09.19.03.29l-.9 1.56c-.05.1-.17.14-.27.1l-1.12-.45l-.74.44l-.19 1.19c-.02.11-.11.19-.22.19h-1.8c-.12 0-.21-.08-.23-.19L5.4 9.62l-.76-.44l-1.14.45c-.09.04-.2 0-.26-.1l-.9-1.56c-.06-.1-.03-.22.05-.29l.95-.74l-.03-.44l.03-.44l-.95-.74a.23.23 0 0 1-.05-.29l.9-1.56c.06-.1.17-.14.26-.1l1.13.45l.77-.44l.16-1.19c.02-.11.11-.19.23-.19h1.8c.11 0 .2.08.22.19L8 3.38l.74.44l1.12-.45c.1-.04.22 0 .27.1l.9 1.56c.06.1.04.22-.03.29l-.97.74l.03.44z"/>
+            </svg>
+          </span>
+          <h3 class="flow-card__title">システム構築</h3>
+          <p class="flow-card__lead">お客様の用途に合わせて新サービスを構築</p>
+        </li>
+
+        <li class="flow-card">
+          <span class="flow-card__step">Step 6</span>
+          <span class="flow-card__icon" aria-hidden="true">
+            <!-- Lucide: cloud -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+            </svg>
+          </span>
+          <h3 class="flow-card__title">納品</h3>
+          <p class="flow-card__lead">Webアプリとしてご提供。<br />メールでログイン情報をお送り</p>
+        </li>
+
+        <li class="flow-card">
+          <span class="flow-card__step">Step 7</span>
+          <span class="flow-card__icon" aria-hidden="true">
+            <!-- Lucide: rocket -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/>
+              <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/>
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/>
+            </svg>
+          </span>
+          <h3 class="flow-card__title">利用開始</h3>
+          <p class="flow-card__lead">導入後、必要に応じて調整しながら運用開始</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== ヤスクの特徴 ===== -->
+    <section class="features-section" id="features" aria-labelledby="featuresTitle">
+      <h2 class="section-title" id="featuresTitle">
+        <span class="section-title__bar"></span>
+        <span class="section-title__text">ヤスクの特徴</span>
+        <span class="section-title__bar"></span>
+      </h2>
+
+      <ul class="features-list">
+        <li class="features-card">
+          <span class="features-card__icon" aria-hidden="true">
+            <!-- Material Symbols (filled): paid -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+              <path d="M444-200h70v-50q50-9 86-39t36-89q0-42-24-77t-96-61q-60-20-83-35t-23-41q0-26 18.5-41t53.5-15q32 0 50 15.5t26 38.5l64-26q-11-35-40.5-61T516-710v-50h-70v50q-50 11-78 44t-28 74q0 47 27.5 76t86.5 50q63 23 87.5 41t24.5 47q0 33-23.5 48.5T486-314q-33 0-58.5-20.5T390-396l-66 26q14 48 43.5 77.5T444-252v52Zm36 120q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>
+            </svg>
+          </span>
+          <h3 class="features-card__title">初期費用0円</h3>
+          <p class="features-card__lead">導入時の負担を<br />抑えて始められます</p>
+        </li>
+
+        <li class="features-card">
+          <span class="features-card__icon" aria-hidden="true">
+            <!-- Material Symbols (filled): trending_down -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+              <path d="M640-240v-80h104L536-526 376-366 80-664l56-56 240 240 160-160 264 264v-104h80v240H640Z"/>
+            </svg>
+          </span>
+          <h3 class="features-card__title">現在のシステム費より安く</h3>
+          <p class="features-card__lead">固定費の削減を<br />最優先にご提案します</p>
+        </li>
+
+        <li class="features-card">
+          <span class="features-card__icon" aria-hidden="true">
+            <!-- Lucide: user -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="8" r="4.5" />
+              <path d="M3.5 21c0-4 3.8-7.2 8.5-7.2s8.5 3.2 8.5 7.2v.5h-17V21z"/>
+            </svg>
+          </span>
+          <h3 class="features-card__title">用途に合わせたご提案</h3>
+          <p class="features-card__lead">お客様の用途に合った<br />最適なサービスをご提案します</p>
+        </li>
+
+        <li class="features-card">
+          <span class="features-card__icon" aria-hidden="true">
+            <!-- Lucide: building-2 風 (filled) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="3" y="9" width="7" height="13" rx="0.5" />
+              <rect x="11" y="2" width="10" height="20" rx="0.5" />
+              <rect x="5" y="11.5" width="1.5" height="1.5" fill="#fff" />
+              <rect x="7.5" y="11.5" width="1.5" height="1.5" fill="#fff" />
+              <rect x="5" y="14.5" width="1.5" height="1.5" fill="#fff" />
+              <rect x="7.5" y="14.5" width="1.5" height="1.5" fill="#fff" />
+              <rect x="5" y="17.5" width="1.5" height="1.5" fill="#fff" />
+              <rect x="7.5" y="17.5" width="1.5" height="1.5" fill="#fff" />
+              <rect x="13" y="4.5" width="1.7" height="1.7" fill="#fff" />
+              <rect x="15.5" y="4.5" width="1.7" height="1.7" fill="#fff" />
+              <rect x="18" y="4.5" width="1.7" height="1.7" fill="#fff" />
+              <rect x="13" y="8" width="1.7" height="1.7" fill="#fff" />
+              <rect x="15.5" y="8" width="1.7" height="1.7" fill="#fff" />
+              <rect x="18" y="8" width="1.7" height="1.7" fill="#fff" />
+              <rect x="13" y="11.5" width="1.7" height="1.7" fill="#fff" />
+              <rect x="15.5" y="11.5" width="1.7" height="1.7" fill="#fff" />
+              <rect x="18" y="11.5" width="1.7" height="1.7" fill="#fff" />
+              <rect x="13" y="15" width="1.7" height="1.7" fill="#fff" />
+              <rect x="15.5" y="15" width="1.7" height="1.7" fill="#fff" />
+              <rect x="18" y="15" width="1.7" height="1.7" fill="#fff" />
+            </svg>
+          </span>
+          <h3 class="features-card__title">中小企業に最適な価格</h3>
+          <p class="features-card__lead">中小企業が導入しやすい<br />価格帯で提供します</p>
+        </li>
+
+        <li class="features-card">
+          <span class="features-card__icon" aria-hidden="true">
+            <!-- Lucide: clock -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+          </span>
+          <h3 class="features-card__title">即時シミュレーション</h3>
+          <p class="features-card__lead">フォーム入力だけで<br />削減の目安がすぐに分かります</p>
+        </li>
+
+        <li class="features-card">
+          <span class="features-card__icon" aria-hidden="true">
+            <!-- Lucide: shield-check (filled) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3zm-1.2 14.6L7 12.8l1.4-1.4 2.4 2.4 5.4-5.4 1.4 1.4-6.8 6.8z"/>
+            </svg>
+          </span>
+          <h3 class="features-card__title">無理な営業はしません</h3>
+          <p class="features-card__lead">削減効果が小さい場合は<br />現行システムの継続をお勧めします</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== 安心してご利用いただくために ===== -->
+    <section class="trust-section" aria-labelledby="trustTitle">
+      <h2 class="trust-section__title" id="trustTitle">安心してご利用いただくために</h2>
+
+      <ul class="trust-list">
+        <li class="trust-card">
+          <span class="trust-card__icon" aria-hidden="true">
+            <!-- Lucide: heart (filled) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+            </svg>
+          </span>
+          <div class="trust-card__body">
+            <h3 class="trust-card__title">得意なことをお約束します</h3>
+            <p class="trust-card__lead">月額固定費の削減と用途に合った新サービスの提供に責任を持ちます。商材の不備や障害には契約期間中しっかり対応します。</p>
+          </div>
+        </li>
+
+        <li class="trust-card">
+          <span class="trust-card__icon" aria-hidden="true">
+            <!-- Lucide: alert-triangle (filled) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21.73 18 13.73 4a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3zM12 17.75a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zM13 14h-2V9h2v5z" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="trust-card__body">
+            <h3 class="trust-card__title">苦手なことは事前にお伝えします</h3>
+            <p class="trust-card__lead">24時間電話サポートなどの手厚い体制はご提供しません。カスタマイズ等は別途費用となる場合があります。</p>
+          </div>
+        </li>
+
+        <li class="trust-card">
+          <span class="trust-card__icon" aria-hidden="true">
+            <!-- Lucide: thumbs-up (filled) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2 10v10a2 2 0 0 0 2 2h2V8H4a2 2 0 0 0-2 2zM21.94 12.31A2 2 0 0 0 20.5 10H14.5l1-4.12A3.13 3.13 0 0 0 12.5 2L8 8.89A2 2 0 0 1 6.21 10H6v12h11.5a2 2 0 0 0 1.92-1.44l2.33-8a2 2 0 0 0-.81-2.25z"/>
+            </svg>
+          </span>
+          <div class="trust-card__body">
+            <h3 class="trust-card__title">コストダウンできない場合はお勧めしません</h3>
+            <p class="trust-card__lead">削減効果が小さい、または弊社の方が高くなる場合は、今お使いのシステムの継続をお勧めします。</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== よくある質問 ===== -->
+    <section class="faq-section" id="faq" aria-labelledby="faqTitle">
+      <h2 class="section-title" id="faqTitle">
+        <span class="section-title__bar"></span>
+        <span class="section-title__text">よくある質問</span>
+        <span class="section-title__bar"></span>
+      </h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span class="faq-item__mark faq-item__mark--q">Q</span>
+            <span class="faq-item__text">初期費用は本当に0円ですか？</span>
+            <span class="faq-item__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-item__a">
+            <span class="faq-item__mark faq-item__mark--a">A</span>
+            <p class="faq-item__text">はい、初期費用は0円です。月額費用は、現在ご利用中のシステム費より安い金額をご提案します。最低契約期間は1年間で、データ移行など別途費用が発生する場合のみ事前にお伝えします。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span class="faq-item__mark faq-item__mark--q">Q</span>
+            <span class="faq-item__text">どんな業務システムが対象ですか？</span>
+            <span class="faq-item__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-item__a">
+            <span class="faq-item__mark faq-item__mark--a">A</span>
+            <p class="faq-item__text">CRM・SFA・顧客管理、案件管理、見積管理、請求管理、在庫・生産・施工管理、予約管理、日報管理、社内管理ツール、製造業・建設業向けの業界特化型システムなど、月額制の業務システム・SaaSを幅広く対象としています。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span class="faq-item__mark faq-item__mark--q">Q</span>
+            <span class="faq-item__text">既存システムからのデータ移行はできますか？</span>
+            <span class="faq-item__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-item__a">
+            <span class="faq-item__mark faq-item__mark--a">A</span>
+            <p class="faq-item__text">対応可能です。データ移行が必要な場合は別途費用が発生する場合があります。お見積もり時にあわせてご案内いたします。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span class="faq-item__mark faq-item__mark--q">Q</span>
+            <span class="faq-item__text">対応できないシステムはありますか？</span>
+            <span class="faq-item__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-item__a">
+            <span class="faq-item__mark faq-item__mark--a">A</span>
+            <p class="faq-item__text">弊社で対応できない仕様のシステムや、ご提供すると弊社の方が割高になるケースがあります。その場合は無理にご提案せず、現在お使いのシステムの継続をお勧めしています。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span class="faq-item__mark faq-item__mark--q">Q</span>
+            <span class="faq-item__text">無料カウンセリングはどのように行いますか？</span>
+            <span class="faq-item__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-item__a">
+            <span class="faq-item__mark faq-item__mark--a">A</span>
+            <p class="faq-item__text">Zoomなどのオンラインミーティングで、15〜20分ほどお時間をいただき、現在お使いのシステムの用途や機能を詳しくヒアリングします。費用はかかりません。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span class="faq-item__mark faq-item__mark--q">Q</span>
+            <span class="faq-item__text">24時間サポートはありますか？</span>
+            <span class="faq-item__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-item__a">
+            <span class="faq-item__mark faq-item__mark--a">A</span>
+            <p class="faq-item__text">大手SaaSベンダーが提供する24時間電話サポートなどの手厚い体制はご提供していません。AIを活用した一定の問い合わせ対応のほか、月額契約期間中は商材の不備や障害に責任を持って対応いたします。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-item__q">
+            <span class="faq-item__mark faq-item__mark--q">Q</span>
+            <span class="faq-item__text">どのくらい安くなりますか？</span>
+            <span class="faq-item__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-item__a">
+            <span class="faq-item__mark faq-item__mark--a">A</span>
+            <p class="faq-item__text">現在ご利用中のシステム費の3分の2以下にならない場合は、無理にご提案いたしません。フォーム入力で目安が即時に分かりますので、まずはお試しください。</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== CTAバナー ===== -->
+    <section class="cta-section" aria-labelledby="ctaTitle">
+      <div class="cta-banner">
+        <div class="cta-banner__lead">
+          <h2 class="cta-banner__title" id="ctaTitle">まずは無料で削減可能額をチェック！</h2>
+          <p class="cta-banner__sub">フォーム入力だけで、今お使いのシステム費の見直しができます。</p>
+        </div>
+
+        <a href="#diagnosis" class="cta-banner__btn">
+          <span class="cta-banner__btn-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="16" height="20" x="4" y="2" rx="2" />
+              <line x1="8" x2="16" y1="6" y2="6" />
+              <line x1="16" x2="16" y1="14" y2="18" />
+              <path d="M16 10h.01" />
+              <path d="M12 10h.01" />
+              <path d="M8 10h.01" />
+              <path d="M12 14h.01" />
+              <path d="M8 14h.01" />
+              <path d="M12 18h.01" />
+              <path d="M8 18h.01" />
+            </svg>
+          </span>
+          <span class="cta-banner__btn-text">削減診断をしてみる（無料）</span>
+          <span class="cta-banner__btn-arrow" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const toggle = document.querySelector('.hamburger');
+      const nav = document.getElementById('globalNav');
+      const overlay = document.querySelector('.nav-overlay');
+      const body = document.body;
+
+      function setOpen(open) {
+        toggle.classList.toggle('is-open', open);
+        nav.classList.toggle('is-open', open);
+        overlay.hidden = !open;
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+        body.classList.toggle('is-nav-open', open);
+      }
+
+      toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+      overlay.addEventListener('click', () => setOpen(false));
+      nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 900 && nav.classList.contains('is-open')) setOpen(false);
+      });
+    })();
+
+    // ===== 削減診断フォーム =====
+    (function () {
+      const form = document.getElementById('diagnosisForm');
+      if (!form) return;
+
+      const results = document.getElementById('diagnosisResults');
+      const resultLabel = results.querySelector('[data-result-label]');
+      const resultSublabel = results.querySelector('[data-result-sublabel]');
+      const monthlyFeeInput = form.querySelector('[name="monthlyFee"]');
+      const employeesInput = form.querySelector('[name="employees"]');
+
+      const baseRateByUsage = {
+        '顧客管理（CRM）': 0.35,
+        '営業支援（SFA）': 0.35,
+        '案件管理': 0.32,
+        '見積・請求管理': 0.30,
+        '在庫・生産管理': 0.28,
+        'その他': 0.30,
+      };
+
+      function employeeAdjustment(n) {
+        if (n <= 10) return 0.03;
+        if (n <= 50) return 0.01;
+        if (n <= 200) return 0;
+        return -0.03;
+      }
+
+      function clamp(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
+
+      function toHalfWidth(str) {
+        return String(str).replace(/[０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0));
+      }
+
+      function parseNumber(str) {
+        if (str == null) return NaN;
+        const cleaned = toHalfWidth(str).replace(/[,，\s]/g, '');
+        if (cleaned === '' || !/^\d+$/.test(cleaned)) return NaN;
+        return Number(cleaned);
+      }
+
+      function formatNumber(n) { return n.toLocaleString('ja-JP'); }
+
+      function setError(name, message) {
+        const field = form.querySelector(`.form-field[data-field="${name}"]`);
+        const errorEl = form.querySelector(`.form-field__error[data-error-for="${name}"]`);
+        if (field) field.classList.add('form-field--error');
+        if (errorEl) errorEl.textContent = message;
+      }
+
+      function clearError(name) {
+        const field = form.querySelector(`.form-field[data-field="${name}"]`);
+        const errorEl = form.querySelector(`.form-field__error[data-error-for="${name}"]`);
+        if (field) field.classList.remove('form-field--error');
+        if (errorEl) errorEl.textContent = '';
+      }
+
+      function clearAllErrors() {
+        ['systemName', 'usage', 'monthlyFee', 'employees', 'companyName', 'fullName', 'email'].forEach(clearError);
+      }
+
+      // 入力変更で当該フィールドのエラーを解除
+      form.querySelectorAll('input, select').forEach((el) => {
+        const name = el.name;
+        if (!name) return;
+        el.addEventListener('input', () => clearError(name));
+        el.addEventListener('change', () => clearError(name));
+      });
+
+      // 月額費用にカンマ自動整形（blur時）
+      if (monthlyFeeInput) {
+        monthlyFeeInput.addEventListener('blur', () => {
+          const n = parseNumber(monthlyFeeInput.value);
+          if (!isNaN(n) && n > 0) monthlyFeeInput.value = formatNumber(n);
+        });
+      }
+
+      function validate(values) {
+        const errors = {};
+        if (!values.systemName.trim()) errors.systemName = 'システム名を入力してください';
+        if (!values.usage) errors.usage = '用途を選択してください';
+        if (isNaN(values.monthlyFeeNum) || values.monthlyFeeNum <= 0)
+          errors.monthlyFee = '正しい月額費用（半角数字）を入力してください';
+        if (isNaN(values.employeesNum) || values.employeesNum <= 0)
+          errors.employees = '正しい従業員数（半角数字）を入力してください';
+        if (!values.companyName.trim()) errors.companyName = '会社名を入力してください';
+        if (!values.fullName.trim()) errors.fullName = '氏名を入力してください';
+        if (!values.email.trim()) {
+          errors.email = 'メールアドレスを入力してください';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())) {
+          errors.email = '正しいメールアドレスを入力してください';
+        }
+        return errors;
+      }
+
+      function calculate(values) {
+        const base = baseRateByUsage[values.usage] ?? 0.30;
+        const rate = clamp(base + employeeAdjustment(values.employeesNum), 0.15, 0.45);
+        const proposed = Math.round(values.monthlyFeeNum * (1 - rate) / 100) * 100;
+        const diff = values.monthlyFeeNum - proposed;
+        const ratePct = Math.round((diff / values.monthlyFeeNum) * 100);
+        return { current: values.monthlyFeeNum, proposed, diff, ratePct };
+      }
+
+      // スピン世代管理（再送信時の旧スピン停止用）
+      const spinGen = new WeakMap();
+
+      function spinNumber(el, finalValue, duration, formatter) {
+        const valueWrap = el.closest('.form-results__value');
+        const myGen = (spinGen.get(el) || 0) + 1;
+        spinGen.set(el, myGen);
+
+        if (valueWrap) {
+          valueWrap.classList.remove('is-locked');
+          valueWrap.classList.add('is-spinning');
+        }
+
+        // 桁数を最終値に揃えるため、上下に少し振幅をつける
+        const min = Math.max(1, Math.floor(finalValue * 0.4));
+        const max = Math.ceil(finalValue * 1.7) + 10;
+        const start = performance.now();
+
+        function tick() {
+          if (spinGen.get(el) !== myGen) return; // 別のスピンが開始したらキャンセル
+          const elapsed = performance.now() - start;
+          if (elapsed >= duration) {
+            el.textContent = formatter(finalValue);
+            if (valueWrap) {
+              valueWrap.classList.remove('is-spinning');
+              void valueWrap.offsetWidth; // リフローでアニメ再起動
+              valueWrap.classList.add('is-locked');
+            }
+            return;
+          }
+          const random = min + Math.floor(Math.random() * (max - min));
+          el.textContent = formatter(random);
+          // 終盤に向けて更新間隔を伸ばす（スロット停止前の「カチ…カチ…」感）
+          const remaining = duration - elapsed;
+          const next = remaining < 300 ? 110 : remaining < 700 ? 80 : 55;
+          setTimeout(tick, next);
+        }
+        tick();
+      }
+
+      function renderResults(r) {
+        if (resultLabel) {
+          resultLabel.childNodes[0].nodeValue = '\nあなたの診断結果\n';
+        }
+        if (resultSublabel) resultSublabel.textContent = '（鑑定中…）';
+
+        results.classList.remove('form-results--filled');
+        void results.offsetWidth;
+        results.classList.add('form-results--filled');
+
+        // 現在の月額費用は既知の入力値なので即時表示
+        const currentEl = results.querySelector('[data-result="current"]');
+        if (currentEl) currentEl.textContent = formatNumber(r.current);
+        // 念のため過去のスピンを停止
+        spinGen.set(currentEl, (spinGen.get(currentEl) || 0) + 1);
+
+        // 提案額・削減額・削減率を順次「ぐるぐる」回す
+        const sequence = [
+          { sel: '[data-result="proposed"]', value: r.proposed, format: formatNumber, duration: 1600 },
+          { sel: '[data-result="diff"]',     value: r.diff,     format: formatNumber, duration: 2500 },
+          { sel: '[data-result="rate"]',     value: r.ratePct,  format: String,       duration: 3400 },
+        ];
+
+        sequence.forEach((f) => {
+          const el = results.querySelector(f.sel);
+          if (el) spinNumber(el, f.value, f.duration, f.format);
+        });
+
+        // 全停止後に sub label を「目安」に戻す
+        const totalDuration = Math.max(...sequence.map(s => s.duration));
+        setTimeout(() => {
+          if (resultSublabel) resultSublabel.textContent = '（あくまで目安です）';
+        }, totalDuration + 200);
+      }
+
+      const submitBtn = form.querySelector('.form-submit');
+
+      async function sendToBackend(values, r) {
+        const payload = {
+          systemName: values.systemName,
+          usage: values.usage,
+          monthlyFee: values.monthlyFeeNum,
+          features: String(new FormData(form).get('features') || ''),
+          employees: values.employeesNum,
+          industry: String(new FormData(form).get('industry') || ''),
+          companyName: values.companyName,
+          fullName: values.fullName,
+          position: String(new FormData(form).get('position') || ''),
+          email: values.email,
+          result: r,
+        };
+
+        try {
+          const res = await fetch('/api/diagnose', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          if (!res.ok) {
+            console.warn('診断データの送信に失敗しました', res.status);
+          }
+        } catch (err) {
+          console.warn('診断データの送信に失敗しました', err);
+        }
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        clearAllErrors();
+
+        const data = new FormData(form);
+        const values = {
+          systemName: String(data.get('systemName') || ''),
+          usage: String(data.get('usage') || ''),
+          monthlyFee: String(data.get('monthlyFee') || ''),
+          employees: String(data.get('employees') || ''),
+          companyName: String(data.get('companyName') || ''),
+          fullName: String(data.get('fullName') || ''),
+          email: String(data.get('email') || ''),
+        };
+        values.monthlyFeeNum = parseNumber(values.monthlyFee);
+        values.employeesNum = parseNumber(values.employees);
+
+        const errors = validate(values);
+        const errorKeys = Object.keys(errors);
+        if (errorKeys.length > 0) {
+          errorKeys.forEach((k) => setError(k, errors[k]));
+          const firstField = form.querySelector(`.form-field[data-field="${errorKeys[0]}"] input, .form-field[data-field="${errorKeys[0]}"] select`);
+          if (firstField) firstField.focus();
+          return;
+        }
+
+        const r = calculate(values);
+        renderResults(r);
+        results.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // 運営側へバックグラウンド送信（結果表示は止めない）
+        if (submitBtn) submitBtn.disabled = true;
+        sendToBackend(values, r).finally(() => {
+          if (submitBtn) submitBtn.disabled = false;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
