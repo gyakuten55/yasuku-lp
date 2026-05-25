@@ -539,51 +539,31 @@ body.is-nav-open .header-logo {
   color: #555;
 }
 
-/* 右側バッジエリア */
+/* 右側バッジエリア（タイトル横） */
 .hero-badges {
   position: absolute;
-  right: min(1.6vw, 24px);
-  top: min(11vw, 160px);
+  right: min(2vw, 28px);
+  top: min(17vw, 240px);
   z-index: 3;
   display: flex;
-  align-items: flex-end;
-  gap: min(0.8vw, 12px);
+  align-items: center;
+  gap: min(0.4vw, 6px);
   pointer-events: none;
 }
 
 .hero-badges__item {
-  width: min(11vw, 160px);
   height: auto;
-  filter: drop-shadow(0 8px 18px rgba(15, 23, 42, 0.25));
+  filter: drop-shadow(0 10px 22px rgba(15, 23, 42, 0.25));
+}
+
+.hero-badges__item--left {
+  width: min(12vw, 170px);
   transform: rotate(-6deg);
 }
 
-.hero-badges__circle {
-  width: min(9.5vw, 140px);
-  height: min(9.5vw, 140px);
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #ffdf6e 0%, #e5a930 60%, #b9851f 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: min(0.25vw, 4px);
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.25), inset 0 0 0 4px #fff3c0, inset 0 0 0 6px #d6a02b;
-  transform: rotate(8deg);
-  color: #143962;
-  text-align: center;
-  line-height: 1.1;
-}
-
-.hero-badges__circle-top {
-  font-size: min(1.4vw, 20px);
-  font-weight: 700;
-}
-
-.hero-badges__circle-bottom {
-  font-size: min(2.2vw, 32px);
-  font-weight: 900;
-  letter-spacing: 0.02em;
+.hero-badges__item--right {
+  width: min(12vw, 170px);
+  transform: rotate(6deg);
 }
 
 /* 下部の金色ストリップ */
@@ -605,8 +585,7 @@ body.is-nav-open .header-logo {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .hero-badges {
-    top: auto;
-    bottom: min(2vw, 28px);
+    top: min(20vw, 220px);
   }
 }
 
@@ -661,21 +640,11 @@ body.is-nav-open .header-logo {
     bottom: auto;
     margin: 18px auto 0;
     justify-content: center;
-    gap: 10px;
+    gap: 6px;
   }
-  .hero-badges__item {
-    width: 92px;
-  }
-  .hero-badges__circle {
-    width: 84px;
-    height: 84px;
-    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2), inset 0 0 0 3px #fff3c0, inset 0 0 0 5px #d6a02b;
-  }
-  .hero-badges__circle-top {
-    font-size: 12px;
-  }
-  .hero-badges__circle-bottom {
-    font-size: 20px;
+  .hero-badges__item--left,
+  .hero-badges__item--right {
+    width: 110px;
   }
   .hero-strip {
     font-size: 13px;
