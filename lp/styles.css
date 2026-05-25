@@ -471,11 +471,11 @@ body.is-nav-open .header-logo {
 .hero-subtitle {
   margin: min(1.4vw, 20px) 0 0;
   font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
-  font-size: min(3vw, 44px);
+  font-size: min(5vw, 72px);
   font-weight: 700;
   line-height: 1.3;
   color: var(--color-text);
-  max-width: 62%;
+  max-width: 100%;
 }
 
 /* 太字ハイライト */
@@ -543,7 +543,7 @@ body.is-nav-open .header-logo {
 .hero-badges {
   position: absolute;
   right: min(2.4vw, 32px);
-  top: min(17vw, 240px);
+  top: min(26vw, 370px);
   z-index: 3;
   display: flex;
   align-items: center;
@@ -576,7 +576,7 @@ body.is-nav-open .header-logo {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .hero-badges {
-    top: min(20vw, 220px);
+    top: min(30vw, 340px);
   }
 }
 
