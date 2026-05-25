@@ -421,139 +421,267 @@ body.is-nav-open .header-logo {
   position: relative;
   width: 100%;
   margin: 0;
-  padding: min(5.6vw, 80px) var(--section-pad-x) min(6.7vw, 96px);
+  padding: min(4.5vw, 64px) var(--section-pad-x) min(4vw, 56px);
   display: grid;
   grid-template-columns: minmax(0, 1fr);
 }
 
-/* 左コンテンツ：常に画面の60%程度をキープ */
+/* 左コンテンツ：バッジが乗る右側を空ける */
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 60%;
+  max-width: 100%;
 }
 
 /* ピル型ラベル */
 .hero-label {
   display: inline-block;
-  padding: min(0.76vw, 11px) min(1.95vw, 28px);
+  padding: min(0.9vw, 13px) min(2.2vw, 32px);
   background: var(--color-primary);
   color: #fff;
-  font-size: min(1.18vw, 17px);
+  font-size: min(1.45vw, 21px);
   font-weight: 700;
-  letter-spacing: 0.06em;
-  border-radius: 999px;
+  letter-spacing: 0.04em;
+  border-radius: min(0.5vw, 6px);
   box-shadow: 0 4px 12px -4px rgba(29, 79, 139, 0.4);
 }
 
 /* メインタイトル */
 .hero-title {
   margin: min(1.8vw, 26px) 0 0;
-  font-size: min(5.7vw, 64px);
-  font-weight: 800;
-  line-height: 1.4;
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: min(5vw, 72px);
+  font-weight: 700;
+  line-height: 1.25;
   letter-spacing: 0.01em;
   color: var(--color-text);
 }
 
-.hero-title__accent {
-  color: var(--color-primary);
+.hero-title__line {
+  display: block;
 }
 
-/* リード文 */
-.hero-lead {
-  margin: min(1.8vw, 26px) 0 0;
-  font-size: min(1.32vw, 18px);
-  font-weight: 500;
-  line-height: 1.95;
+.hero-title__accent {
+  color: var(--color-primary);
+  font-size: 1.25em;
+  letter-spacing: -0.01em;
+}
+
+/* サブタイトル「簡単に確認出来ます。」 */
+.hero-subtitle {
+  margin: min(1.4vw, 20px) 0 0;
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: min(3vw, 44px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-text);
+  max-width: 62%;
+}
+
+/* 太字ハイライト */
+.hero-highlight {
+  margin: min(2.6vw, 36px) 0 0;
+  font-size: min(1.4vw, 20px);
+  font-weight: 700;
+  line-height: 1.7;
   color: var(--color-text);
 }
 
-/* 3カード */
-.hero-cards {
-  list-style: none;
-  margin: min(3.6vw, 48px) 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: min(1.25vw, 16px);
-}
-
-.hero-card {
-  display: flex;
-  align-items: center;
-  gap: min(1.1vw, 16px);
-  padding: min(1.5vw, 22px) min(1.5vw, 22px);
-  background: #fff;
-  border: 1px solid #e0e8f1;
-  border-radius: min(1.25vw, 18px);
-  box-shadow: 0 8px 24px -12px rgba(15, 23, 42, 0.08);
-}
-
-.hero-card__icon {
-  flex-shrink: 0;
-  width: min(4vw, 56px);
-  height: min(4vw, 56px);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.hero-highlight__accent {
   color: var(--color-primary);
 }
 
-.hero-card__icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.hero-card__body {
+/* 説明文（複数段落） */
+.hero-description {
+  margin: min(1.4vw, 20px) 0 0;
   display: flex;
   flex-direction: column;
-  gap: min(0.55vw, 8px);
-  min-width: 0;
+  gap: min(0.7vw, 10px);
 }
 
-.hero-card__label {
-  font-size: min(0.97vw, 14px);
+.hero-description p {
+  margin: 0;
+  font-size: min(1.1vw, 16px);
   font-weight: 500;
-  color: var(--color-primary);
-  letter-spacing: 0.03em;
-  line-height: 1;
-  white-space: nowrap;
+  line-height: 1.85;
+  color: var(--color-text);
 }
 
-.hero-card__value {
-  font-size: min(2.22vw, 32px);
-  font-weight: 800;
-  color: var(--color-primary);
-  line-height: 1;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
+/* システムタグ群 */
+.hero-tags {
+  list-style: none;
+  margin: min(2.4vw, 34px) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: min(0.9vw, 12px);
 }
 
-.hero-card__value--text {
-  font-size: min(1.8vw, 26px);
-}
-
-.hero-card__unit {
-  font-size: 0.6em;
+.hero-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: min(0.2vw, 3px);
+  padding: min(1vw, 14px) min(0.6vw, 8px);
+  background: #fff;
+  border: 1.5px solid var(--color-primary);
+  border-radius: min(0.6vw, 8px);
+  font-size: min(1.05vw, 15px);
   font-weight: 700;
-  margin-left: 0.2em;
+  color: var(--color-text);
+  line-height: 1.25;
+  text-align: center;
 }
 
-/* 右下バッジ */
-.hero-badge {
+.hero-tag span:last-child {
+  font-size: 0.85em;
+  color: #555;
+}
+
+/* 右側バッジエリア */
+.hero-badges {
   position: absolute;
-  right: min(0.5vw, 8px);
-  bottom: 0;
-  width: min(30vw, 440px);
-  aspect-ratio: 3 / 2;
-  background-image: url("images/hero-badge.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  right: min(1.6vw, 24px);
+  top: min(11vw, 160px);
   z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  gap: min(0.8vw, 12px);
   pointer-events: none;
-  filter: drop-shadow(0 10px 24px rgba(15, 23, 42, 0.2));
+}
+
+.hero-badges__item {
+  width: min(11vw, 160px);
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgba(15, 23, 42, 0.25));
+  transform: rotate(-6deg);
+}
+
+.hero-badges__circle {
+  width: min(9.5vw, 140px);
+  height: min(9.5vw, 140px);
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffdf6e 0%, #e5a930 60%, #b9851f 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: min(0.25vw, 4px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.25), inset 0 0 0 4px #fff3c0, inset 0 0 0 6px #d6a02b;
+  transform: rotate(8deg);
+  color: #143962;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.hero-badges__circle-top {
+  font-size: min(1.4vw, 20px);
+  font-weight: 700;
+}
+
+.hero-badges__circle-bottom {
+  font-size: min(2.2vw, 32px);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+/* 下部の金色ストリップ */
+.hero-strip {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180deg, #d4a93a 0%, #b9881d 100%);
+  color: #fff;
+  text-align: center;
+  font-size: min(1.4vw, 20px);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: min(1.1vw, 16px) var(--section-pad-x);
+}
+
+/* === Hero レスポンシブ === */
+@media (max-width: 1100px) {
+  .hero-tags {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .hero-badges {
+    top: auto;
+    bottom: min(2vw, 28px);
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-inner {
+    padding: 32px 20px 28px;
+  }
+  .hero-label {
+    font-size: 12px;
+    padding: 8px 14px;
+    letter-spacing: 0.02em;
+  }
+  .hero-title {
+    font-size: 30px;
+    margin-top: 16px;
+  }
+  .hero-title__accent {
+    font-size: 1.2em;
+  }
+  .hero-subtitle {
+    font-size: 22px;
+    max-width: 100%;
+    margin-top: 12px;
+  }
+  .hero-highlight {
+    font-size: 14px;
+    margin-top: 22px;
+    line-height: 1.7;
+  }
+  .hero-description {
+    margin-top: 14px;
+    gap: 8px;
+  }
+  .hero-description p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .hero-tags {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .hero-tag {
+    padding: 10px 6px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+  .hero-badges {
+    position: relative;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    margin: 18px auto 0;
+    justify-content: center;
+    gap: 10px;
+  }
+  .hero-badges__item {
+    width: 92px;
+  }
+  .hero-badges__circle {
+    width: 84px;
+    height: 84px;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2), inset 0 0 0 3px #fff3c0, inset 0 0 0 5px #d6a02b;
+  }
+  .hero-badges__circle-top {
+    font-size: 12px;
+  }
+  .hero-badges__circle-bottom {
+    font-size: 20px;
+  }
+  .hero-strip {
+    font-size: 13px;
+    padding: 10px 16px;
+    letter-spacing: 0.04em;
+  }
 }
 
 /* ===================================================
