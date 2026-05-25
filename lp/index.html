@@ -974,10 +974,10 @@
         const position = String(data.get('position') || '');
 
         const payload = {
-          _subject: `【ヤスク】削減診断：${values.companyName} ${values.fullName} 様（${values.systemName}）`,
-          _template: 'table',
-          _captcha: 'false',
-          _replyto: values.email,
+          access_key: '38c5412b-e052-42f8-94a3-17415fe4edb7',
+          subject: `【ヤスク】削減診断：${values.companyName} ${values.fullName} 様（${values.systemName}）`,
+          from_name: 'ヤスク 削減診断フォーム',
+          replyto: values.email,
           '会社名': values.companyName,
           '氏名': values.fullName,
           '役職': position || '-',
@@ -994,14 +994,11 @@
           '【診断】削減率(%)': fmt(r.ratePct),
         };
 
-        const body = new URLSearchParams();
-        for (const [k, v] of Object.entries(payload)) body.append(k, String(v));
-
         try {
-          const res = await fetch('https://formsubmit.co/ajax/ohshita@riilgate.com', {
+          const res = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
-            headers: { 'Accept': 'application/json' },
-            body,
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload),
           });
           if (!res.ok) {
             console.warn('診断データの送信に失敗しました', res.status);
